@@ -1,0 +1,62 @@
+{% extends 'base.html' %} {% block content %}
+
+<!======== HTML FORM container Start  ==================>
+
+<section class="Feature-area section-gap" id="service">
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      <div class="menu-content pb-60 col-lg-8">
+        <div class="title text-center">
+          <h1 class="mb-10">Marksheet</h1>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <form method="post">
+          {% if error %}
+                  <div class="alert alert-danger" role="alert">
+                    please enter the Value
+                </div>
+                {% endif %}
+          {% csrf_token %}
+
+          <div>
+            <label>Subject 1</label>
+            <input type="text" name="num1" value="{{n1}}" class="form-control" />
+            <label>Subject 2</label>
+            <input type="text" name="num2" value="{{n2}}" class="form-control" />
+            <label>Subject 3</label>
+            <input type="text" name="num3" value="{{n3}}" class="form-control" />
+            <label>Subject 4</label>
+            <input type="text" name="num4" value="{{n4}}" class="form-control" />
+            <label>Subject 5</label>
+            <input type="text" name="num5" value="{{n5}}" class="form-control" />
+          </div>
+          
+          <div class="pt-2">
+            <button type="submit">Calculate</button>
+          </div>
+          <div>
+            <label>Total Mark</label>
+            <input type="text" value="{{t}}" class="form-control" />
+          </div>
+          <div>
+            <label>Percantage</label>
+            <input type="text" value="{{per}}" class="form-control" />
+          </div>
+          <div>
+            <label>Grade</label>
+            <input type="text" value="{{gd}}" class="form-control" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!======== HTML FORM container End  ==================>
+
+<!======== footer Start  ==================>
+
+{% endblock %}

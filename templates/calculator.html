@@ -1,0 +1,51 @@
+{% extends 'base.html' %} {% block content %}
+
+<!======== HTML FORM container Start  ==================>
+
+<section class="Feature-area section-gap" id="service">
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      <div class="menu-content pb-60 col-lg-8">
+        <div class="title text-center">
+          <h1 class="mb-10">Calculator</h1>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <form method="post">
+          {% csrf_token %}
+
+          <div>
+            <label>Value1</label>
+            <input type="text" name="num1" value="{{n1}}" class="form-control" />
+          </div>
+          <label>select Opr...</label>
+          <select name="opr" value="{{opr}}" class="form-control" pt-2>
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+          </select>
+          <div>
+            <label>Value2</label>
+            <input type="text" name="num2" value="{{n2}}" class="form-control" />
+          </div>
+          <div class="pt-2">
+            <button type="submit">Calculate</button>
+          </div>
+          <div>
+            <label>output</label>
+            <input type="text" Value="{{c}}" class="form-control" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!======== HTML FORM container End  ==================>
+
+<!======== footer Start  ==================>
+
+{% endblock %}

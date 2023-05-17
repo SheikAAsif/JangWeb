@@ -1,0 +1,51 @@
+{% extends 'base.html' %} 
+{% block content %}
+
+
+
+<section class="Feature-area section-gap" id='enquiryformAdmin'>
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="menu-content pb-60 col-lg-8">
+                <div class="title text-center">
+                    <h1 class="mb-10"> User Enquiry Form</h1>
+                                        
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-12">
+            <form method="post" active="{% url 'enquiryform'%}" id='enquiry'>
+            {% csrf_token %}                  
+                <div>
+                        <label for="">Name</label>
+                        <input type="text" name="name1" id="name1" Value="" class="form-control"/>
+                    </div>
+                    <div>
+                        <label for="">Cast</label>
+                        <input type="text" name="Cast" id="Cast" Value="" class="form-control"/>
+                    </div>
+                    <div>
+                        <label for="">Email</label>
+                        <input type="text" name="email" id="email" Value="" class="form-control"/>
+                    </div>
+                    <div>
+                        <label for="">Description</label>
+                        <input type="Description" name="desc" id="desc" Value="" class="form-control"/>
+                    </div>
+                    <div class="pt-2">
+                        <button type="submit">save
+                    </div>
+                    
+                    
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+  
+</section>
+
+
+{% endblock %}
