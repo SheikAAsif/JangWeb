@@ -36,18 +36,23 @@
                 {% url 'Home' as url %}
                 <a class="nav-link {% if request.path == url %} active {% endif %}" href="{{url}}">Home</a>
               </li>
+                            
               <li>  
                 {% url 'About-us' as url %}
                 <a class="nav-link {% if request.path == url %} active {% endif %}" href="{{url}}">About</a>
               </li>
+               
               <li>  
-                {% url 'contactUs' as url %}
-                <a class="nav-link {% if request.path == url %} active {% endif %}" href="{{url}}">contact us</a>
-              </li>  
+                {% url 'contact-us' as url %}
+                <a class="nav-link {% if request.path == url %} active {% endif %}" href="{{url}}">contact-us</a>
+              </li>
+
               <li>  
                 {% url 'userform' as url %}
                 <a class="nav-link {% if request.path == url %} active {% endif %}" href="{{url}}">Userform</a>
               </li>
+
+ 
               <!--<li>  
                 
                 <a class="nav-link" href="#">calculator</a>
