@@ -10,11 +10,12 @@
           {% csrf_token %}
           <div class="col-md-6">
             <label for="name" class="form-label">Name</label>
-            <input type="text" name="name" class="form-control" id="name" />
+            <input type="text" name="name" class="form-control" id="name" placeholder="AAsif" />
+            
           </div>
           <div class="col-md-6">
             <label for="lastname" class="form-label">lastName</label>
-            <input type="text" name="lastname" class="form-control" id="lastname" />
+            <input type="text" name="lastname" class="form-control" id="lastname" placeholder="Cast , 2ndName" />
           </div>
           <div class="col-6">
             <label for="address" class="form-label">Address</label>
@@ -38,7 +39,7 @@
           </div>
           <div class="col-md-6">
             <label for="city" class="form-label">City</label>
-            <input type="text" name="city" class="form-control" id="city" />
+            <input type="text" name="city" class="form-control" id="city" placeholder=" Tando Adam , Karachi" />
           </div>
 
           <div class="col-12">
@@ -203,17 +204,19 @@
 
 <!======== Card container End  ==================>
 
-
-<div class="title text-center py-4 py-md-4">
+<div class="container pt-4 my-4">
+  
+  <div class="title text-center py-4 py-md-4">
   <h5>Marksheet</h5>
 
 <a href="/Marksheet/" class="icon-link icon-link-hover fw-semibold">
   Calculate Your Percentage
   <svg class="bi"><use xlink:href="#arrow-right"></use></svg>
 </a>
+
 </div> 
 
-<div class="title text-center py-8 py-md-6">
+<div class="title text-center">
   <h5>Calculator</h5>
 
 <a href="/calculator/" class="icon-link icon-link-hover fw-semibold">
@@ -221,7 +224,7 @@
   <svg class="bi"><use xlink:href="#arrow-right"></use></svg>
 </a>
 </div> 
-
+</div>
 
 <!======== footer Start  ==================>
 
